@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imagens</title>
+</head>
+<body>
+    <h1>conhecendo o elemento de Imagens (IMG)</h1>
+<hr>
+
+<h2> sobre o elemento IMG</h2>
+<p> trabalhar com imagens no <abbr title="HyperText Markup Language">HTML</abbr> envolve muito mais do que apenas colocar uma foto na página</p>
+<p>existem várias formas, tecnicas e recursos para exibir, organizar, otimizar e adaptar imagens para diferentes dispositivos.</p>
+<h3> formatos mais comuns de imagens</h3>
+<ul>
+    <li><strong>JPEG (Joint Photographic Experts Group):</strong> é um formato de imagem amplamente utilizado para fotografias e imagens com muitos detalhes. Ele utiliza compressão com perda, o que significa que a qualidade da imagem pode ser reduzida para diminuir o tamanho do arquivo.</li>
+    <li><strong>PNG (Portable Network Graphics):</strong> é um formato de imagem sem perda, ideal para gráficos, logotipos e imagens com transparência. Ele suporta uma ampla gama de cores e é amplamente utilizado na web.</li>
+    <li><strong>GIF (Graphics Interchange Format):</strong> é um formato de imagem que suporta animações. Ele é limitado a 256 cores, o que o torna mais adequado para gráficos simples e animações curtas.</li>
+    <li><strong>SVG (Scalable Vector Graphics):</strong> é um formato de imagem vetorial que pode ser redimensionado sem perda de qualidade. Ele é ideal para logotipos, ícones e gráficos que precisam ser escalados para diferentes tamanhos.</li>
+<p> é a forma mais simples de inserir uma imagem em uma página web.</p>
+
+<h3> exemplo pratico de uso do elemento IMG</h3>
+<p>Trabalhando com Links externos:</p>
+
+<img src="https://plus.unsplash.com/premium_photo-1661877737564-3dfd7282efcb?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3" alt="">
+
+<p>o atributo src é obrigatório e deve conter o caminho para a imagem que você deseja exibir. O atributo alt é importante para acessibilidade, pois fornece uma descrição alternativa da imagem para leitores de tela e para casos em que a imagem não pode ser carregada.</p>
+
+<h4>trabalho com imagens locais</h4>
+<img src="assets/códigos.jpg" alt="Imagem de códigos" width="350">
+</ul>
+<hr>
+
+<h3>dimensões em pixels</h3>
+
+<p>você pode controlar o tamanho da imagem usando os atributos width e height. Esses atributos definem a largura e a altura da imagem em pixels</p>
+
+<p>width é o atributo que define a largura da imagem em pixels.</p>
+<p>height é o atributo que define a altura da imagem em pixels.</p>
+<hr>
+<h2> trabalhando com imagens responsivas</h2>
+<p> O <code>picture</code> é um elemento que permite oferecer diferentes versões de uma imagem para diferentes contextos, como tamanhos de tela ou resoluções.</p>
+<p> essa tag permite:</p>
+<ul>
+    <li>Oferecer imagens otimizadas para diferentes dispositivos, como smartphones, tablets e desktops.</li>
+    <li>Melhorar o desempenho do site, carregando apenas a imagem necessária para o dispositivo do usuário.</li>
+    <li>Fornecer uma melhor experiência de usuário, garantindo que as imagens sejam exibidas corretamente em diferentes tamanhos de tela.</li>
+<picture>
+        <source srcset="assets/dragao-oriental-mobile.jpg" media="(max-width: 600px)" type="image/jpg">
+        <source srcset="assets/dragao-oriental-tablet.jpg" media="(max-width: 800px)" type="image/jpg">
+
+        <img src="assets/dragao-oriental-mobile.jpg" alt="Dragão Oriental" height="600" width="600"> 
+    </picture>
+
+<p> srcset- define as diferentes versões da imagem para diferentes resoluções.</p>
+</body>
+</html>
